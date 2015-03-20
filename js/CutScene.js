@@ -1,26 +1,19 @@
 //cut scene to play videos between game play
 Critterer.CutScene = function(game){
-     console.log('test');
-      this.Scorpions = "https://vimeo.com/112414428";
-      this.Walking_Stick = "https://vimeo.com/111256268";
-      this.Walking_Stick_Breathe = "https://vimeo.com/111256267";
-      this.Walking_Stick_do = "https://vimeo.com/111256266";
-      this.Walking_Sticks_live = "https://vimeo.com/111256265";
+      this.Scorpions = "https://vimeo.com/112414428api=1&player_id=vimeoplayer";
+      this.Walking_Stick = "https://vimeo.com/111256268api=1&player_id=vimeoplayer";
+      this.Walking_Stick_Breathe = "https://vimeo.com/111256267api=1&player_id=vimeoplayer";
+      this.Walking_Stick_do = "https://vimeo.com/111256266api=1&player_id=vimeoplayer";
+      this.Walking_Sticks_live = "https://vimeo.com/111256265api=1&player_id=vimeoplayer";
       this.valueToUse;
-      this.timer = game.time.create(1000, false);
+      this.iframe = $('#player1')[0];
+      this.player = $(this.iframe);
+      this.status1 = $('.status');
 };
     
 
     
  Critterer.CutScene.prototype = {
-   
-  timer: function() {
-   this.timer.add(3000);
-   this.timer.onEvent.add(alert("hello"), this),
-   this.timer.start();
-  },
-  
-  
      picker: function() {
          var values = [
              this.Scorpions,
@@ -53,6 +46,25 @@ Critterer.CutScene = function(game){
               },
               
     });
+    this.player.addEvent('ready', function addEvent() {
+        this.status1.text('ready');
+        
+        this.player.addEvent('pause', onPause);
+        this.player.addEvent('finish', onFinish);
+        this.player.addEvent('playProgress', onPlayProgress);
+    }),
+    
+    function onPause(id) {
+        this.status1.text('paused');
+    };
+
+    function onFinish(id) {
+        this.status1.text('finished');
+    }
+
+    function onPlayProgress(data, id) {
+        this.status1.text(data.seconds + 's played');
+    }
 },
 
   update: function() {

@@ -8,7 +8,7 @@ Critterer.Preloader = function(game) {
     this.loader_lbl = null;
     this.game_play_btn = null;
     this.ready = false;
-    console.log("test")
+    console.log("test");
 };
 
 Critterer.Preloader.prototype = {
@@ -58,4 +58,4 @@ Critterer.Preloader.prototype = {
         this.ready = true;
         this.state.start('MainMenu');
     }
-}
+};
