@@ -1,10 +1,10 @@
 //cut scene to play videos between game play
 Critterer.CutScene = function(game){
-      this.Scorpions = "https://vimeo.com/112414428api=1&player_id=vimeoplayer";
-      this.Walking_Stick = "https://vimeo.com/111256268api=1&player_id=vimeoplayer";
-      this.Walking_Stick_Breathe = "https://vimeo.com/111256267api=1&player_id=vimeoplayer";
-      this.Walking_Stick_do = "https://vimeo.com/111256266api=1&player_id=vimeoplayer";
-      this.Walking_Sticks_live = "https://vimeo.com/111256265api=1&player_id=vimeoplayer";
+      this.Scorpions = "https://vimeo.com/112414428?api=1&player_id=vimeoplayer";
+      this.Walking_Stick = "https://vimeo.com/111256268?api=1&player_id=vimeoplayer";
+      this.Walking_Stick_Breathe = "https://vimeo.com/111256267?api=1&player_id=vimeoplayer";
+      this.Walking_Stick_do = "https://vimeo.com/111256266?api=1&player_id=vimeoplayer";
+      this.Walking_Sticks_live = "https://vimeo.com/111256265?api=1&player_id=vimeoplayer";
       this.valueToUse;
       this.iframe = $('#player1')[0];
       this.player = $(this.iframe);
