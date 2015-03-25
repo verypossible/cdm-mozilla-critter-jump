@@ -43,7 +43,7 @@ var PausePanel = function(game, parent){
 
 	// Place it out of bounds
 	this.x = 0;
-	this.y = -100;
+	this.y = -200;
 };
 
 PausePanel.prototype = Object.create(Phaser.Group.prototype);
@@ -274,8 +274,8 @@ Critterer.Game.prototype = {
         bad_objects.forEachExists(this.killFruit);
 
         this.score = 0;
-        // scoreLabel.text = 'Game Over!\nHigh Score: ' + highscore;
-        // this.state.start('GameOver')
+        scoreLabel.text = 'Game Over!\nHigh Score: ' + highscore;
+        this.state.start('GameOver')
     },
 
     // @todo animate objects toward a backpack (shrink, spin, fade-out)
@@ -291,4 +291,3 @@ Critterer.Game.prototype = {
     }
 
 }; 
-

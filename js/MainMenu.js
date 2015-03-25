@@ -5,7 +5,7 @@
  */
 Critterer.MainMenu = function(game) {
 
-}
+};
 
 Critterer.MainMenu.prototype = {
 
@@ -56,4 +56,4 @@ Critterer.MainMenu.prototype = {
 
         }
 
-}
+};
