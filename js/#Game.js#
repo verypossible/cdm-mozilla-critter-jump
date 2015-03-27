@@ -101,9 +101,9 @@ Critterer.Game.prototype = {
         this.btnPause.inputEnabled = true;
         this.btnPause.events.onInputDown.addOnce(this.pauseGame, this);
 
-	    // Let's build a pause panel
-	    this.pausePanel = new PausePanel(this.game);
-	    this.game.add.existing(this.pausePanel);
+	// Let's build a pause panel
+	this.pausePanel = new PausePanel(this.game);
+	this.game.add.existing(this.pausePanel);
 	this.pausePanel.hide();
     
         var launchX = Math.random() * 4;
@@ -118,14 +118,13 @@ Critterer.Game.prototype = {
     
     pauseGame: function(){
 	   if(!this.paused){
-           console.log("And we're trying to pause!");
-		  // Show panel
-		  this.paused = true;
-		  this.pausePanel.show();
+	       // Show panel
+	       this.paused = true;
+	       this.pausePanel.show();
            
-          this.game.physics.arcade.gravity.x = 0;
-           this.game.physics.arcade.gravity.y = 0;
-           this.game.physics.arcade.gravity.z = 0;
+               this.game.physics.arcade.gravity.x = 0;
+               this.game.physics.arcade.gravity.y = 0;
+               this.game.physics.arcade.gravity.z = 0;
 	   }
     },
 
@@ -170,11 +169,11 @@ Critterer.Game.prototype = {
     },
     
     throwBadObject: function(launchX) {
-	    var obj = bad_objects.getFirstDead();
+	var obj = bad_objects.getFirstDead();
         obj.reset(this.world.centerX + Math.random()*100 - Math.random()*100, 600);
-	    obj.anchor.setTo(launchX, 0.5);
-	    //obj.body.angularAcceleration = 100;
-	    this.physics.arcade.moveToXY(obj, this.world.centerX, this.world.centerY, 530);
+	obj.anchor.setTo(launchX, 0.5);
+	//obj.body.angularAcceleration = 100;
+	this.physics.arcade.moveToXY(obj, this.world.centerX, this.world.centerY, 530);
 },
 
     update: function () {
