@@ -195,7 +195,7 @@ Critterer.Game.prototype = {
         this.score++;
         scoreLabel.text = 'Score: ' + this.score;
         
-        if(this.score == 10) {
+        if(this.score == 3) {
             this.state.start('CutScene');
         }
     }
