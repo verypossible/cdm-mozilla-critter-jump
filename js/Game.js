@@ -65,7 +65,7 @@ Critterer.Game.prototype = {
 
     create: function () {
 	
-	this.addBackground();
+	
 
         //These are green circles that represent what will be bugs
         var bmd = this.add.bitmapData(100, 100);
@@ -111,14 +111,11 @@ Critterer.Game.prototype = {
         this.throwObject(launchX);
     },
     
-<<<<<<< HEAD
-=======
     //function to add background
-    addBackground: function(){
+    /*addBackground: function(){
 	this.add.image(0,0, 'background');
-    },
+    },*/
     
->>>>>>> master
     pauseGame: function(){
 	   if(!this.paused){
            console.log("And we're trying to pause!");

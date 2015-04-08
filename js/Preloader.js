@@ -37,13 +37,10 @@ Critterer.Preloader.prototype = {
         // pre load assets for the rest of the game (e.g. Main Menu, Game, etc.)
         this.load.image('critterer_logo', 'img/critterer_logo.png');
         this.load.image('game_play_btn', 'img/hud/game-play.png');
-<<<<<<< HEAD
         this.load.image('btnPause', 'img/hud/pause.png');
 	this.load.image('panel', 'img/hud/proto-pause-menu.png');
-=======
 	this.load.image('background', 'img/background.jpg');
 	this.load.image('btnPause', 'img/hud/pause.png');
->>>>>>> master
     },
 
     /**
