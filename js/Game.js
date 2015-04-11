@@ -18,7 +18,6 @@ Critterer.Game = function (game) {
     this.score = 0;
     this.fireRate = 1000;
     this.nextFire = 0;
-    console.log("test");
 };
 
 Critterer.Game.prototype = {
