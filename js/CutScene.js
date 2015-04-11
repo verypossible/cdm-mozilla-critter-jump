@@ -71,6 +71,7 @@ Critterer.CutScene = function(game){
     $('button').on('click', function() {
         post($(this).text().toLowerCase());
     });
+<<<<<<< HEAD
 
     // Helper function for sending a message to the player
     function post(action, value) {
@@ -134,6 +135,10 @@ Critterer.CutScene = function(game){
 
   },
 
+=======
+},
+ 
+>>>>>>> 56e699a6314a3fc3f7c4fb8c1856aa05081a128b
   update: function() {
 
 	},     
